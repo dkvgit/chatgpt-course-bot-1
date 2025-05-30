@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, CallbackQueryHandle
 import os
 
 BOT_TOKEN = os.getenv("7645649555:AAF7Kcgbyl2Sp-S2OQEAkMhP1PWn4l1eHo4")
-CHANNEL_LINK = "https://t.me/+abc123def456"  # Твой закрытый канал
+CHANNEL_LINK = "https://t.me/ai_chatgpt_course_bot"  # Замени на свою ссылку
 
 app = Flask(__name__)
 bot_app = ApplicationBuilder().token(BOT_TOKEN).build()
@@ -47,5 +47,5 @@ if __name__ == "__main__":
     bot_app.run_webhook(
         listen="0.0.0.0",
         port=int(os.environ.get("PORT", 5000)),
-        webhook_url=f"https://<your-app-url>.render.com/{BOT_TOKEN}"
+        webhook_url=f"https://<your-app-url>.onrender.com/{BOT_TOKEN}"
     )
